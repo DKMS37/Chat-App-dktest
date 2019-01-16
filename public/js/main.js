@@ -10,6 +10,17 @@ $("#start").on("click", function(event) {
         email: $("#email").val().trim()
     }
     console.log(newUser);
+
+    $.post("api/users", newUser).then(function(data){
+        console.log(data)
+    });
+
+
+
+
+
+
+
 })
 
 });

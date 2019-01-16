@@ -5,8 +5,6 @@ const mysql2 = require("mysql2");
 const sequelize = require("sequelize");
 const db = require("./models");
 
-
-// For jawsDB
 var connection;
 if (process.env.JAWSDB_URL) {
     // DB is JawsDB on Heroku
@@ -40,6 +38,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 db.sequelize.sync({}).then(function() {
     app.listen(PORT, function() {
@@ -49,5 +48,3 @@ db.sequelize.sync({}).then(function() {
 
 
 
-
-module.exports = connection;

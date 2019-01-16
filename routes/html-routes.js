@@ -14,7 +14,7 @@ const express = require("express");
         res.sendFile(path.join(__dirname, "../public/conference.html"));
     });
     // app.get("/api/users", function(req, res){
-    //    return res.json(users);
+    //    return res.json();
     // })
 
 
