@@ -28,7 +28,6 @@ connection.connect(function (err) {
     console.log('connected as id ' + connection.threadId);
 });
 
-module.exports = connection;
 
 
 const PORT = process.env.PORT || 8080;
@@ -46,5 +45,6 @@ db.sequelize.sync({}).then(function() {
     });
   });
 
+module.exports = connection;
 
 
